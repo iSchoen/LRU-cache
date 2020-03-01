@@ -92,10 +92,6 @@ class LRUCache {
     const { prevKey, nextKey } = item;
 
     if (prevKey == null) {
-      if (nextKey == null) {
-        this.leastRecentlyUsedKey = item.key;
-      }
-
       this.leastRecentlyUsedKey = nextKey;
     } else {
       this.items[prevKey].nextKey = nextKey;
