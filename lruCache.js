@@ -1,13 +1,4 @@
 /*
- * The first thing I did was look up what an LRU cache was because I had forgotten after our conversation!
- * I figured that if I looked up the problem from a site that used an LRU cache as a toy problem,
- * that I would get as little information as possible beforehand, while having a good idea of what an LRU cache was.
- * So I looked up LRU cache and found the first toy problem in the search results from leet code - https://leetcode.com/problems/lru-cache/
- *
- * The following is the toy problem provided from that link:
- */
-
-/*
  * Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
  *
  * get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
@@ -74,7 +65,7 @@ class LRUCache {
       key,
       value,
       prevKey: this.mostRecentlyUsedKey,
-      nextKey: null
+      nextKey: null,
     };
 
     this.items[key] = newValue;
